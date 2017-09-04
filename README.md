@@ -3,11 +3,11 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: Naked twins is another approach (except eliminate and only_choice ) that can be used to eliminate the impossible solution. When two identical pair of values appear in two boxes within the same unit (row_unit, column_unit or square_unit), meaning these values can only be the solution of the two boxes, and cannot be the solutions of the other boxes. For example, if box A1 and B1 have the possible solution 12, which means the answer 1 and 2 can only be assigned to either A1 or B1. If other boxes in row 1 also have 1 or 2 as the potential solution, then both values should be excluded. By utilizing naked twins approach, we are able to eliminate the impossible solution, which can efficiently reduce the search space. 
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: In order to solve the Diagonal Sudoku, we can add two new units which includes boxes located on the two main diagonals. Therefore, there are four lists of units now in unitlist (row_units, column_units, square_units, and diag_units) which has 9+9+9+2 units (constraints) in total. The additional constraints can then be automatically applied to three functions (eliminate, only_choice, and naked_twins) for minimizing the possible values in a box. With those approaches (constraint propagation), the search space can be significantly reduced.  
 
 ### Install
 
